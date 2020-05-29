@@ -1,0 +1,39 @@
+%input-text {
+    border: 2px solid $primary;
+    border-radius: 40px;
+    color: $darkGrey;
+    font-family: inherit;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px 3px 1px rgba(171, 100, 204, 0.6);
+    }
+}
+
+%input-placeholder {
+    ::placeholder {
+        color: #a7a4a4;
+        font-family: inherit;
+    }
+}
+
+%button {
+    background: $primary;
+    border: 2px solid $primary;
+    box-shadow: 0px 10px 15px rgba(193, 113, 227, 0.4);
+    border-radius: 40px;
+    color: #ffffff;
+    font-family: inherit;
+
+    &:hover {
+        cursor: pointer;
+        background: $btnHoverColor;
+        border: 2px solid $btnHoverColor;
+    }
+
+    &:focus {
+        background: $btnClickColor;
+        border: 2px solid $btnClickColor;
+        outline: none;
+    }
+}
