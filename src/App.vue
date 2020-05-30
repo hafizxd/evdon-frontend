@@ -68,7 +68,13 @@ small {
 }
 
 .container {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 70%;
+  }
 }
 </style>
