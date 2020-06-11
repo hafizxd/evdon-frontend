@@ -13,10 +13,14 @@
         <div class="links">
           <ul>
             <li>
-              <i class="material-icons-round">home</i>
+              <a href="#">
+                <i class="material-icons-round">home</i>
+              </a>
             </li>
             <li>
-              <i class="material-icons-outlined">notifications</i>
+              <a href="#">
+                <i class="material-icons-outlined">notifications</i>
+              </a>
             </li>
             <li>
               <div class="profile-picture">
@@ -38,12 +42,7 @@
 
 <script>
 export default {
-  name: "Navbar",
-  mounted() {
-    let pathName = window.location.pathname;
-
-    if (pathName === "/") this.$refs.navbar.style.display = "none";
-  }
+  name: "Navbar"
 };
 </script>
 
@@ -52,7 +51,9 @@ export default {
   width: 100%;
   height: auto;
   padding: 12px 0;
+  position: fixed;
   box-shadow: 0px 4px 15px rgba(96, 96, 96, 0.25);
+  background-color: $background;
 
   nav {
     display: flex;
@@ -76,8 +77,7 @@ export default {
       input {
         @extend %input-text;
         width: 100%;
-        height: 23px;
-        padding-left: 10px;
+        padding: 3px 0 3px 10px;
       }
 
       @extend %input-placeholder;
@@ -96,16 +96,12 @@ export default {
           list-style: none;
           height: auto;
 
-          .profile-picture {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            overflow: hidden;
+          a {
+            color: $text;
+          }
 
-            img {
-              width: 100%;
-              height: auto;
-            }
+          .profile-picture {
+            @include round-img(25px);
           }
         }
       }
@@ -132,6 +128,10 @@ export default {
 
       .search {
         width: 30%;
+
+        input {
+          height: 28px;
+        }
       }
 
       .links {

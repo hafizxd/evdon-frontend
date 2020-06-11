@@ -101,7 +101,7 @@ export default {
   }
 }
 
-@media screen and (min-width: $breakpointDekstop) {
+@media screen and (min-width: $breakpointDesktop) {
   .landing-auth {
     display: flex;
     align-content: stretch;

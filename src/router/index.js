@@ -17,7 +17,10 @@ const router = new VueRouter({
   routes: [{
       path: '/',
       name: 'LandingAuth',
-      component: LandingAuth
+      component: LandingAuth,
+      meta: {
+        hideNavbar: true
+      }
     },
     {
       path: '/home',

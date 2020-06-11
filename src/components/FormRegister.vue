@@ -26,7 +26,7 @@ export default {
   margin: 40px auto;
 
   .register-text {
-    color: $darkGrey;
+    color: $text;
   }
 
   form {
@@ -37,16 +37,15 @@ export default {
     input:not([type="button"]) {
       @extend %input-text;
       margin: 7px 0;
-      height: 40px;
-      padding-left: 13px;
+      padding: 10px 0 10px 13px;
     }
 
     @extend %input-placeholder;
 
     input[type="button"] {
       @extend %button;
-      height: 40px;
       margin: 15px 0;
+      padding: 10px 0;
     }
   }
 }
@@ -60,7 +59,6 @@ export default {
 
       input:not([type="button"]) {
         margin: 12px 0;
-        height: 42px;
         padding-left: 18px;
         font-size: 1em;
       }

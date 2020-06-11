@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar v-if="!$route.meta.hideNavbar" />
     <router-view></router-view>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -68,13 +68,19 @@ small {
 }
 
 .container {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 70%;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .container {
-    width: 70%;
+    width: 900px;
   }
 }
 </style>

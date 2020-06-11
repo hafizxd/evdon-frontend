@@ -30,9 +30,8 @@ export default {
 
       input:not([type="button"]) {
         @extend %input-text;
-        width: 42%;
-        height: 32px;
-        padding-left: 13px;
+        width: 47%;
+        padding: 7px 0 7px 13px;
       }
 
       @extend %input-placeholder;
@@ -41,8 +40,8 @@ export default {
     input[type="button"] {
       @extend %button;
       width: 100%;
-      height: 32px;
       margin: 15px 0;
+      padding: 7px 0;
       align-self: center;
     }
   }

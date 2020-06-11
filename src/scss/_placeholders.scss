@@ -1,7 +1,7 @@
 %input-text {
     border: 2px solid $primary;
     border-radius: 40px;
-    color: $darkGrey;
+    color: $text;
     font-family: inherit;
 
     &:focus {
@@ -12,7 +12,7 @@
 
 %input-placeholder {
     ::placeholder {
-        color: #a7a4a4;
+        color: $textLighter;
         font-family: inherit;
     }
 }
@@ -27,13 +27,20 @@
 
     &:hover {
         cursor: pointer;
-        background: $btnHoverColor;
-        border: 2px solid $btnHoverColor;
+        background: $primaryLight;
+        border: 2px solid $primaryLight;
     }
 
     &:focus {
-        background: $btnClickColor;
-        border: 2px solid $btnClickColor;
+        background: $primaryDark;
+        border: 2px solid $primaryDark;
         outline: none;
     }
+}
+
+%vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
